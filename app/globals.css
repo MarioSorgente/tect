@@ -1,0 +1,12 @@
+:root{
+  --bg:#0b0d10; --panel:#12151a; --ink:#e7edf3; --muted:#8ea2b5; --accent:#6aa6ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,Arial}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+.card{background:var(--panel);border:1px solid #1f2735;border-radius:16px;padding:16px}
+.badge{padding:4px 10px;border-radius:999px;background:#1a2230;color:#c9d3e0;font-size:12px}
+.hint{color:var(--muted);font-size:13px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{background:#1a2230;border:1px solid #2a3344;border-radius:10px;padding:8px 12px;color:#e8f0fb}
