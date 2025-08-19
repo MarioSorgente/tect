@@ -12,10 +12,10 @@ import ReactFlow, {
   useNodesState,
   Node
 } from "reactflow";
-import "reactflow/dist/style.css";
+// NOTE: reactflow CSS is globally imported in app/layout.tsx
 
-import { useBoardStore } from "@/store/useBoardStore";
-import type { Block, Board } from "@/core/graph/types";
+import { useBoardStore } from "../../store/useBoardStore";
+import type { Block } from "../../core/graph/types";
 
 function newBlock(id: string): Block {
   return {
@@ -38,7 +38,7 @@ export default function Canvas() {
 
   const onConnect = React.useCallback((c: Connection) => {
     rfSetEdges((eds) => addEdge(c, eds));
-    // Mirror into our Board store (use generic port ids for now)
+    // Mirror into Board store (generic in/out ports for now)
     const id = Math.random().toString(36).slice(2, 10);
     setEdges([
       ...board.edges,
