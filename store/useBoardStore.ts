@@ -1,7 +1,7 @@
 // store/useBoardStore.ts
 "use client";
 import { create } from "zustand";
-import type { Board, Block, Edge } from "@/core/graph/types";
+import type { Board, Block, Edge } from "../core/graph/types";
 
 type State = {
   board: Board;
