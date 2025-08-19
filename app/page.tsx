@@ -1,6 +1,8 @@
 // app/page.tsx
-"use client";
-import Canvas from "@/components/Canvas/Canvas";
+import dynamic from "next/dynamic";
+
+// Load Canvas only in the browser to avoid SSR/hydration issues
+const Canvas = dynamic(() => import("@/components/Canvas/Canvas"), { ssr: false });
 
 export default function Home() {
   return (
